@@ -14,7 +14,6 @@ print "$a"."\n";
 }
 
 $string="aaaa";
-
 color_a($string);
 
 #color_b($string);
