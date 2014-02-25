@@ -4,6 +4,7 @@ namespace sapphire\base;
 use \PDO;
 use sapphire\base\mvc\SlimWrapper;
 
+
 class Initializer{
 
 	static $container;
@@ -12,6 +13,7 @@ class Initializer{
 		self::$container = new \Pimple();
 		return self::$container;
 	}
+
 
 
 	public static function initBase($container) {
@@ -30,6 +32,8 @@ class Initializer{
 			}
 		});
 
+
+
 		//initializer slim
 		$container['slim'] = $container->share(function() {
 			return new SlimWrapper(array(
@@ -37,7 +41,6 @@ class Initializer{
 			    'mode' => 'development',
                 'debug' => true,		
 			));
-		
 		});
 
 		$container['cache'] = '';
